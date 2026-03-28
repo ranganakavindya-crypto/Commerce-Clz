@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | NEXTGEN Minds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: var(--space-lg) 0;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .sidebar {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: var(--space-md);
+            box-shadow: var(--shadow);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-menu li {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius);
+            transition: var(--transition);
+            color: var(--dark);
+        }
+        
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            background: var(--light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .dashboard-content {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow);
+        }
+        
+        .welcome-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: var(--space-lg);
+            border-radius: var(--radius);
+            margin-bottom: var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .stat-card {
+            background: var(--light);
+            padding: var(--space-md);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        
+        .stat-card h3 {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+        
+        .stat-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .courses-enrolled {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .enrolled-card {
+            border: 2px solid #eee;
+            border-radius: var(--radius);
+            padding: var(--space-md);
+            transition: var(--transition);
+        }
+        
+        .enrolled-card:hover {
+            border-color: var(--primary);
+        }
+        
+        .enrolled-card h4 {
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: var(--space-sm) 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .btn-continue {
+            width: 100%;
+            margin-top: var(--space-sm);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://placehold.co/200x60/667eea/ffffff?text=NEXTGEN+Minds&font=roboto" alt="Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Support</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <span id="userDisplay" style="align-self:center; font-weight:600;"></span>
+                <button onclick="logout()" class="btn btn-outline btn-sm">Logout</button>
+            </div>
+            <button class="mobile-toggle"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- DASHBOARD HEADER -->
+    <section class="dashboard-header">
+        <div class="container">
+            <h1>My Learning Dashboard</h1>
+            <p>Track your progress and access lessons</p>
+        </div>
+    </section>
+
+    <!-- DASHBOARD CONTENT -->
+    <section class="section">
+        <div class="container dashboard-grid">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active">📊 Overview</a></li>
+                    <li><a href="#">📚 My Courses</a></li>
+                    <li><a href="#">📝 Assignments</a></li>
+                    <li><a href="#">🏆 Certificates</a></li>
+                    <li><a href="#">⚙️ Settings</a></li>
+                </ul>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="dashboard-content">
+                <div class="welcome-card">
+                    <div>
+                        <h2>Welcome back, <span id="studentName">Student</span>! 👋</h2>
+                        <p>Grade: <span id="studentGrade">13</span> • Stream: <span id="studentStream">Commerce</span></p>
+                    </div>
+                    <a href="courses.html" class="btn btn-outline" style="background:rgba(255,255,255,0.2); color:white; border-color:white;">Browse Courses</a>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <h3>2</h3>
+                        <p>Active Courses</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>12</h3>
+                        <p>Lessons Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>85%</h3>
+                        <p>Average Progress</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>4</h3>
+                        <p>Assignments</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom:var(--space-md); color:var(--primary);">Continue Learning</h3>
+                <div class="courses-enrolled">
+                    <div class="enrolled-card">
+                        <h4>Accounting - Grade 13</h4>
+                        <p style="font-size:0.9rem; color:var(--gray);">Financial Statements</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <p style="font-size:0.8rem; text-align:right;">75% Complete</p>
+                        <a href="lecture.html" class="btn btn-primary btn-continue btn-sm">Continue Lesson</a>
+                    </div>
+                    <div class="enrolled-card">
+                        <h4>Economics - Grade 13</h4>
+                        <p style="font-size:0.9rem; color:var(--gray);">Macro Economics</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;"></div>
+                        </div>
+                        <p style="font-size:0.8rem; text-align:right;">30% Complete</p>
+                        <a href="lecture.html" class="btn btn-primary btn-continue btn-sm">Continue Lesson</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 NEXTGEN Minds. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Check Auth & Load User Data
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(localStorage.getItem('nextgen_user'));
+            if (!user || !localStorage.getItem('nextgen_logged_in')) {
+                window.location.href = 'login.html';
+                return;
+            }
+            document.getElementById('studentName').textContent = user.name || 'Student';
+            document.getElementById('studentGrade').textContent = user.grade || '13';
+            document.getElementById('studentStream').textContent = user.stream || 'Commerce';
+            document.getElementById('userDisplay').textContent = user.name || 'Student';
+        });
+    </script>
+</body>
+
+</html>

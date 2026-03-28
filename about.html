@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NEXTGEN Minds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+        
+        .about-section {
+            padding: var(--space-xl) 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-lg);
+        }
+        
+        .mission-card {
+            background: var(--light);
+            padding: var(--space-lg);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        
+        .mission-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .stats-section {
+            background: var(--primary);
+            color: var(--white);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-lg);
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: var(--space-xs);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://placehold.co/200x60/667eea/ffffff?text=NEXTGEN+Minds&font=roboto" alt="Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Enroll Now</a>
+            </div>
+            <button class="mobile-toggle"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About NEXTGEN Minds</h1>
+            <p class="sinhala">Together We Build Smart Minds ❤️</p>
+        </div>
+    </section>
+
+    <!-- ABOUT CONTENT -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>NEXTGEN Minds was founded with a simple mission: to make Advanced Level education accessible, engaging, and effective for every Sri Lankan student.</p>
+                    <p>What started as a small classroom has grown into a trusted online learning platform, serving students across Colombo, Gampaha, Kalutara, and beyond.</p>
+                    <p>Our unique teaching methodology combines traditional wisdom with modern technology to deliver results that matter.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400/667eea/ffffff?text=Our+Classroom&font=roboto" alt="Classroom">
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400/764ba2/ffffff?text=Teaching+Method&font=roboto" alt="Teaching">
+                </div>
+                <div class="about-text">
+                    <h2>Our Teaching Philosophy</h2>
+                    <p>We believe learning should be engaging, not overwhelming. Our approach focuses on:</p>
+                    <ul style="margin-left:1.5rem; margin-top:1rem;">
+                        <li>✓ Clear, simple explanations of complex topics</li>
+                        <li>✓ Real-world examples from Sri Lankan context</li>
+                        <li>✓ Regular practice with past papers</li>
+                        <li>✓ Personalized feedback and support</li>
+                        <li>✓ Z-score focused strategies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="icon">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>To empower Sri Lankan students with the knowledge, skills, and confidence to excel in Advanced Level examinations and beyond.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="icon">👁️</div>
+                    <h3>Our Vision</h3>
+                    <p>To be Sri Lanka's most trusted and results-driven online tuition platform for Advanced Level Commerce & Science streams.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="icon">❤️</div>
+                    <h3>Our Values</h3>
+                    <p>Excellence, Integrity, Innovation, and Student-Centered Learning guide everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="container">
+            <h2>Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Pass Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>A Grades</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>District Toppers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>NEXTGEN Minds</h4>
+                <p>Together We Build Smart Minds ❤️</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>📧 info@nextgenminds4u.com</p>
+                <p>📍 Sri Lanka</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NEXTGEN Minds. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

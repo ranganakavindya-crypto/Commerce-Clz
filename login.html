@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NEXTGEN Minds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .auth-container {
+            max-width: 400px;
+            margin: var(--space-xl) auto;
+            padding: var(--space-lg);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .auth-container h2 {
+            text-align: center;
+            margin-bottom: var(--space-sm);
+            color: var(--primary);
+        }
+        
+        .auth-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 600;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: var(--radius);
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .forgot-link {
+            display: block;
+            text-align: right;
+            margin-bottom: var(--space-md);
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        .auth-links {
+            text-align: center;
+            margin-top: var(--space-md);
+        }
+        
+        .auth-links a {
+            color: var(--primary);
+        }
+        
+        .help-text {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: var(--space-lg);
+            padding-top: var(--space-md);
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://placehold.co/200x60/667eea/ffffff?text=NEXTGEN+Minds&font=roboto" alt="Logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="auth-container">
+            <h2>Welcome to NEXTGEN Minds!</h2>
+            <p class="auth-subtitle">Login to access your courses</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="07XXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <a href="#" class="forgot-link">Forgot Password?</a>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Login</button>
+            </form>
+
+            <div class="auth-links">
+                <p>Don't have an account? <a href="register.html">Create one</a></p>
+            </div>
+
+            <p class="help-text sinhala">
+                ගිණුමට ප්‍රවේශ වීමේ ගැටලු පවතීනම්,<br> info@nextgenminds4u.com ඔස්සේ අපව අමතන්න.
+            </p>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

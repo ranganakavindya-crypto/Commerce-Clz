@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses | NEXTGEN Minds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+        
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--primary);
+            background: var(--white);
+            color: var(--primary);
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .course-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .course-content {
+            padding: var(--space-md);
+        }
+        
+        .course-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .course-content h3 {
+            color: var(--primary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .course-meta {
+            display: flex;
+            gap: var(--space-md);
+            margin: var(--space-sm) 0;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .course-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: var(--space-md) 0;
+        }
+        
+        .subject-tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: var(--light);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: var(--space-xs);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://placehold.co/200x60/667eea/ffffff?text=NEXTGEN+Minds&font=roboto" alt="Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Enroll Now</a>
+            </div>
+            <button class="mobile-toggle"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Courses</h1>
+            <p>Advanced Level Tuition for Commerce & Science Streams</p>
+        </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="accounting">Accounting</button>
+                <button class="filter-btn" data-filter="economics">Economics</button>
+                <button class="filter-btn" data-filter="business">Business Studies</button>
+                <button class="filter-btn" data-filter="science">Science</button>
+                <button class="filter-btn" data-filter="grade12">Grade 12</button>
+                <button class="filter-btn" data-filter="grade13">Grade 13</button>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card" data-subject="accounting" data-grade="grade12">
+                    <img src="https://placehold.co/400x200/667eea/ffffff?text=Accounting+Grade+12&font=roboto" alt="Course" class="course-image">
+                    <div class="course-content">
+                        <span class="course-badge">Popular</span>
+                        <h3>Accounting - Grade 12 Complete</h3>
+                        <p>Master financial accounting from basics to advanced concepts.</p>
+                        <div class="course-meta">
+                            <span>📚 40 Lessons</span>
+                            <span>⏱ 60 Hours</span>
+                        </div>
+                        <div>
+                            <span class="subject-tag">Grade 12</span>
+                            <span class="subject-tag">Commerce</span>
+                        </div>
+                        <div class="course-price">Rs. 8,500</div>
+                        <a href="course-detail.html?id=acc12" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card" data-subject="accounting" data-grade="grade13">
+                    <img src="https://placehold.co/400x200/764ba2/ffffff?text=Accounting+Grade+13&font=roboto" alt="Course" class="course-image">
+                    <div class="course-content">
+                        <span class="course-badge">New</span>
+                        <h3>Accounting - Grade 13 Complete</h3>
+                        <p>Advanced accounting with past paper practice and exam techniques.</p>
+                        <div class="course-meta">
+                            <span>📚 50 Lessons</span>
+                            <span>⏱ 75 Hours</span>
+                        </div>
+                        <div>
+                            <span class="subject-tag">Grade 13</span>
+                            <span class="subject-tag">Commerce</span>
+                        </div>
+                        <div class="course-price">Rs. 10,000</div>
+                        <a href="course-detail.html?id=acc13" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card" data-subject="economics" data-grade="grade12">
+                    <img src="https://placehold.co/400x200/f093fb/ffffff?text=Economics+Grade+12&font=roboto" alt="Course" class="course-image">
+                    <div class="course-content">
+                        <h3>Economics - Grade 12 Foundation</h3>
+                        <p>Build strong foundations in micro and macro economics.</p>
+                        <div class="course-meta">
+                            <span>📚 35 Lessons</span>
+                            <span>⏱ 50 Hours</span>
+                        </div>
+                        <div>
+                            <span class="subject-tag">Grade 12</span>
+                            <span class="subject-tag">Commerce</span>
+                        </div>
+                        <div class="course-price">Rs. 7,500</div>
+                        <a href="course-detail.html?id=eco12" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card" data-subject="economics" data-grade="grade13">
+                    <img src="https://placehold.co/400x200/48bb78/ffffff?text=Economics+Grade+13&font=roboto" alt="Course" class="course-image">
+                    <div class="course-content">
+                        <span class="course-badge">Best Seller</span>
+                        <h3>Economics - Grade 13 Mastery</h3>
+                        <p>Complete syllabus with Z-score focused strategies.</p>
+                        <div class="course-meta">
+                            <span>📚 45 Lessons</span>
+                            <span>⏱ 70 Hours</span>
+                        </div>
+                        <div>
+                            <span class="subject-tag">Grade 12</span>
+                            <span class="subject-tag">Commerce</span>
+                        </div>
+                        <div class="course-price">Rs. 9,500</div>
+                        <a href="course-detail.html?id=eco13" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card" data-subject="business" data-grade="grade12">
+                    <img src="https://placehold.co/400x200/ed8936/ffffff?text=Business+Grade+12&font=roboto" alt="Course" class="course-image">
+                    <div class="course-content">
+                        <h3>Business Studies - Grade 12</h3>
+                        <p>Learn management, marketing, and business operations.</p>
+                        <div class="course-meta">
+                            <span>📚 30 Lessons</span>
+                            <span>⏱ 45 Hours</span>
+                        </div>
+                        <div>
+                            <span class="subject-tag">Grade 12</span>
+                            <span class="subject-tag">Commerce</span>
+                        </div>
+                        <div class="course-price">Rs. 7,000</div>
+                        <a href="course-detail.html?id=biz12" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card" data-subject="science" data-grade="grade13">
+                    <img src="https://placehold.co/400x200/f56565/ffffff?text=Science+Combined&font=roboto" alt="Course" class="course-image">
+                    <div class="course-content">
+                        <span class="course-badge">Science</span>
+                        <h3>Combined Mathematics - Grade 13</h3>
+                        <p>Advanced mathematics for science stream students.</p>
+                        <div class="course-meta">
+                            <span>📚 60 Lessons</span>
+                            <span>⏱ 90 Hours</span>
+                        </div>
+                        <div>
+                            <span class="subject-tag">Grade 13</span>
+                            <span class="subject-tag">Science</span>
+                        </div>
+                        <div class="course-price">Rs. 12,000</div>
+                        <a href="course-detail.html?id=sci13" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>NEXTGEN Minds</h4>
+                <p>Together We Build Smart Minds ❤️</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>📧 info@nextgenminds4u.com</p>
+                <p>📍 Sri Lanka</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NEXTGEN Minds. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+
+</html>
