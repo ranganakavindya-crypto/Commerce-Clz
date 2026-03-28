@@ -1,0 +1,29 @@
+:root {
+    /* Colors - NEXTGEN Minds Brand */
+    --primary: #667eea;
+    --primary-dark: #5568d3;
+    --secondary: #764ba2;
+    --accent: #f093fb;
+    --success: #48bb78;
+    --warning: #ed8936;
+    --danger: #f56565;
+    --light: #f7fafc;
+    --dark: #2d3748;
+    --gray: #718096;
+    --white: #ffffff;
+    /* Typography */
+    --font-en: 'Poppins', 'Segoe UI', sans-serif;
+    --font-si: 'Noto Sans Sinhala', 'Iskoola Pota', sans-serif;
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    /* Layout */
+    --radius: 8px;
+    --radius-lg: 16px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+}
